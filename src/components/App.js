@@ -121,6 +121,7 @@ class App extends Component {
           isOpen={foodModalOpen}
           onRequestClose={this.closeFoodModal}
           contentLabel="Modal"
+          ariaHideApp={false}
         >
           <div>
             {loadingFood === true
@@ -160,6 +161,7 @@ class App extends Component {
           isOpen={ingredientsModalOpen}
           onRequestClose={this.closeIngredientsModal}
           contentLabel="Modal"
+          ariaHideApp={false}
         >
           {ingredientsModalOpen && <ShoppingList list={this.generateShoppingList()}/>}  
         </Modal>
