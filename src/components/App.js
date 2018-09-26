@@ -182,11 +182,11 @@ const mapStateToProps = ({ calendar, food }) => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
+const mapDispatchToProps = dispatch => (
+  {
     selectRecipe: data => dispatch(addRecipe(data)),
     remove: data => dispatch(removeFromCalendar(data))
   }
-}
+)
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
